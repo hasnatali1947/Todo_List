@@ -1,0 +1,21 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ToDo_container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 2px solid;
+    width: 50%;
+    padding: 10px;
+}
