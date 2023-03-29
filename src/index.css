@@ -1,21 +1,108 @@
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.ToDo_container{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    border: 2px solid;
-    width: 50%;
-    padding: 10px;
+.ToDo-List {
+  border: 2px solid;
+}
+
+.ToDo_container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border: 2px solid;
+  padding: 10px;
+}
+
+.input-type {
+  display: flex;
+  border: none;
+  width: 90vh;
+  padding: 10px;
+  font-size: 20px;
+}
+
+::placeholder {
+  font-size: 20px;
+}
+
+.enterSng {
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  margin-top: -3vh;
+  justify-content: center;
+}
+
+.descriptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2vh;
+}
+
+.inputDescripation {
+  display: flex;
+}
+
+.input-contaner {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+  padding: 10px;
+  height: 4vh;
+  font-size: 20px;
+}
+
+.refresh {
+  color: black;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.RotateArror {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./Icons/arrows-rotate-solid.svg');
+  background-size: cover;
+  background-position: center;
+  height: 3vh;
+  width: 3vh;
+  margin-top: 1vh;
+}
+
+.bin {
+  background-image: url('./Icons/bin.png');
+  background-size: cover;
+  background-position: center;
+  height: 2.5vh;
+  width: 2.5vh;
+  margin-top: 1vh;
+}
+
+.ClearAll {
+  background-color: rgba(73, 73, 73, 0.33);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

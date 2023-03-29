@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo_List</title>
-</head>
-<body>
-    
-    <div class="ToDo_container">
-        <h1>Today's To Do</h1>
+  </head>
+  <body>
+
+    <div class="ToDo-List">
+      <ul>
+        <div class="ToDo_container">
+          <h1>Today's To Do</h1>
+          <i class="RotateArror"></i>
+        </div>
+        <li class="input-contaner">
+          <input
+            class="input-type"
+            id="input-type"
+            placeholder="Add to your list..."
+            type="text"
+          />
+          <i class="enterSng"> ,, </i>
+        </li>
+        <ul id="todoFullList"></ul>
+        <br />
+        <br />
+        <br />
+        <li class="ClearAll">Clear all completed</li>
+      </ul>
     </div>
-    
-</body>
+  </body>
 </html>
