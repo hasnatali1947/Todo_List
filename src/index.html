@@ -1,34 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo_List</title>
-  </head>
-  <body>
-
-    <div class="ToDo-List">
-      <ul>
-        <div class="ToDo_container">
-          <h1>Today's To Do</h1>
-          <i class="RotateArror"></i>
-        </div>
-        <li class="input-contaner">
-          <input
-            class="input-type"
-            id="input-type"
-            placeholder="Add to your list..."
-            type="text"
-          />
-          <i class="enterSng"> ,, </i>
-        </li>
-        <ul id="todoFullList"></ul>
-        <br />
-        <br />
-        <br />
-        <li class="ClearAll">Clear all completed</li>
-      </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./index.js" type="module"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>ToDo</title>
+</head>
+<body>
+    <div class="toDo-Container">
+        <ul class="toDo">
+            <li><h4>Today's To Do</h4> <i class="fa-solid fa-arrows-rotate"></i></li>
+            <li><input type="text" class="inp" placeholder="Add to your list..."><i class="fa-solid fa-turn-down-left"></i></li>
+            <ul id="addtodo">
+            </ul>
+            <li class="btn-li"><button>Clear all completed</button></li>
+        </ul>
     </div>
-  </body>
+</body>
 </html>
