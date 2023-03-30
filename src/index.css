@@ -32,6 +32,10 @@ body {
   font-size: 20px;
 }
 
+.input-type:active {
+  border: none;
+}
+
 ::placeholder {
   font-size: 20px;
 }
@@ -42,6 +46,7 @@ body {
   align-items: center;
   margin-top: -3vh;
   justify-content: center;
+  cursor: pointer;
 }
 
 .descriptions {
@@ -98,6 +103,7 @@ li {
   height: 2.5vh;
   width: 2.5vh;
   margin-top: 1vh;
+  cursor: pointer;
 }
 
 .ClearAll {
@@ -105,4 +111,16 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+/* ///////////////////// */
+
+.todoFullList {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox:checked + span {
+  text-decoration: line-through;
 }
