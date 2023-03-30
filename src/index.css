@@ -113,9 +113,6 @@ li {
   align-items: center;
 }
 
-
-/* ///////////////////// */
-
 .todoFullList {
   display: flex;
   flex-direction: column;
