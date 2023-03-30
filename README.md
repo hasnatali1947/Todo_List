@@ -47,7 +47,7 @@
 
 > <a href="https://hasnatali1947.github.io/Awesome-books/" >Visit</a>
 
-<!-- GETTING STARTED -->
+<!-- GETTING STARTED ->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
