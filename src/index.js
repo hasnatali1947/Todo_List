@@ -1,3 +1,7 @@
+
+import { parseInt } from 'lodash';
+import './style.css';
+
 import Add, { Remove } from './modules/funtions.js';
 
 const Container = document.getElementById('addtodo');
