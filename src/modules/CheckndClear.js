@@ -6,16 +6,13 @@ function check(e) {
 }
 
 export { check };
-const UpdateCheck = (e) => {
-  if (e.target.checked) {
-    const ind = e.target.getAttribute('data-com');
-    Tasks[ind].completed = true;
-  } else {
-    const ind = e.target.getAttribute('data-com');
-    Tasks[ind].completed = false;
-  }
-  localStorage.setItem('list', JSON.stringify(Tasks));
-};
+const UpdateCheck = (event) => {
+    const index = event.target.getAttribute('data-com');
+    if (Tasks[index]) {
+      Tasks[index].completed = event.target.checked;
+      localStorage.setItem('list', JSON.stringify(Tasks));
+    }
+  };
 export { UpdateCheck };
 const DeleteAll = () => {
   const Incomplete = Tasks.filter((task) => !task.completed);

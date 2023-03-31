@@ -20,9 +20,11 @@
   - [❓ FAQ (OPTIONAL)](#faq)
   - [📝 License ](#-license-)
 
-# 📖 [Awesome Book Project] <a name="about-project"></a>
+# 📖 [Todo List] <a name="about-project"></a>
 
-> Discover an amazing collection of books on our website! Easily store your favorite reads with author names and enjoy seamless access to a vast library of literature. Get started now!
+> Hello , This is a To-Do list Program where You can add remove and edit lists.
+
+**[Todo]** is a simple shelf where you can add books with author names and also you can delete it.
 
 ## 🛠️ Built With <a name="built-with"></a>
 
@@ -34,20 +36,28 @@
 
 ### Key Features <a name="key-features"></a>
 
-> My Project Links
-> Details of my self
-> Contact avaiable
-> Animation and Transition
+- **[Simple Template]**
+- **[Books listed from array]**
+- **[buttons ]**
+- **[colors ]**
+- **[Dynamic styles]**
+- **[Editable texts]**
+- **[Add Delete features]**
+- **[Completed updated]**
+- **[buttons]**
+- **[colors]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO ->
+<!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> <a href="https://hasnatali1947.github.io/Awesome-books/" >Visit</a>
+- [Not Available]
 
-<!-- GETTING STARTED ->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -101,19 +111,14 @@ Get a hosting website and give all of the github files
 - Twitter: [@hasnatking1947](https://twitter.com/hasnatking1947)
 - LinkedIn: [Hasnat ali](https://www.linkedin.com/feed/?trk=homepage-basic_google-sign-in-submit)
 
-👤**Mercy Mugambi**
-
-- Github: [@mercymugambi](https://github.com/mercymugambi)
-- Twitter: [@mercymugambi](https://twitter.com/mercymugambi15)
-- Linkedin: [mercy mugambi](https://www.linkedin.com/in/mercymugambi)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Would be adding contact page and css styling
+- [ ] **[Add / Remove]**
+- [ ] **[dynamic data ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
