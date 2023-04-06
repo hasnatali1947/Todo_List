@@ -1,4 +1,4 @@
-import Add, { Remove } from './modules/funtions.js';
+import { Add, Remove } from './modules/funtions.js';
 import './style.css';
 import { check, UpdateCheck, DeleteAll } from './modules/CheckndClear.js';
 
@@ -52,7 +52,6 @@ listItemsContainer.addEventListener('keypress', (e) => {
       }
       const num = e.target.getAttribute('data-para');
       Tasks[num].description = e.target.textContent;
-      // window.location.reload();
     }
   }
   return localStorage.setItem('list', JSON.stringify(Tasks));
