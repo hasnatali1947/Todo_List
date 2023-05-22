@@ -1,15 +1,23 @@
 import { Add, Remove } from './modules/funtions.js';
 import './style.css';
-import { check, UpdateCheck, DeleteAll } from './modules/CheckndClear.js';
+import { check, UpdateCheck, DeleteAll } from './modules/CheckandClear.js';
 
 const Container = document.getElementById('addtodo');
 const input = document.querySelector('.inp');
 const Tasks = JSON.parse(localStorage.getItem('list')) || [];
+
 const Display = () => {
   Tasks.forEach((list, index) => {
-    Container.innerHTML += `<li class="li-list" ><input class="li-list check" type="checkbox" data-com="${index}"> <p contenteditable="true" class="paragraph" data-para="${index}">${list.description}</p><i class="fa-regular fa-trash-can" data-index="${index}"></i> <i class="li-list fa-solid fa-ellipsis-vertical"></i></li>`;// eslint-disable-line no-return-assign
+    Container.innerHTML += `
+      <li class="li-list">
+        <input class="li-list check" type="checkbox" data-com="${index}">
+        <p contenteditable="true" class="paragraph" data-para="${index}">${list.description}</p>
+        <i class="fa-regular fa-trash-can" data-index="${index}"></i>
+        <i class="li-list fa-solid fa-ellipsis-vertical"></i>
+      </li>`;
   });
 };
+
 input.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
     Add();
@@ -65,5 +73,5 @@ document.addEventListener('change', (event) => {
   UpdateCheck(event);
 });
 
-const deleteBtn = document.getElementById('btn-li');
+const deleteBtn = document.getElementById('ClearAll');
 deleteBtn.addEventListener('click', DeleteAll);

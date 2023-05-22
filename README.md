@@ -79,7 +79,7 @@ And run `npm start` to launch the project .
 
 Clone this repository to your desired folder:
 
-  `git clone https://github.com/hasnatali1947/Awesome-books.git`
+  `git clone https://github.com/hasnatali1947/Todo_List.git`
 
 ### Usage
 
