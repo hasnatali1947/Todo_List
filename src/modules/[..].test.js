@@ -1,4 +1,4 @@
-const addRemove = require('./funtions');
+const addRemove = require('./funtions.js');
 
 global.localStorage = {
   getItem: jest.fn(() => null),

@@ -14,7 +14,7 @@ function Add(obj) {
   } else {
     tasks.push(obj);
   }
-  
+
   localStorage.setItem('list', JSON.stringify(tasks));
   return tasks;
 }

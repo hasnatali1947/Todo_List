@@ -1,4 +1,4 @@
-import { Add, Remove } from './modules/funtions';
+import { Add, Remove } from './modules/funtions.js';
 import './style.css';
 import { check, updateCheck, deleteAll } from './modules/CheckandClear.js';
 
@@ -18,7 +18,7 @@ const displayTasks = () => {
   });
 };
 
-const input = document.querySelector('.input'); // Add this line
+const input = document.querySelector('.input');
 
 input.addEventListener('input', (e) => {
   inputValue = e.target.value;
@@ -84,6 +84,8 @@ listItemsContainer.addEventListener('keypress', (e) => {
     }
   }
   localStorage.setItem('list', JSON.stringify(tasks));
+
+  return true; // Add this line to return at the end of the arrow function
 });
 
 listItemsContainer.addEventListener('click', (event) => {
