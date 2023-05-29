@@ -51,8 +51,6 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo">(./dist/https://hasnatali1947.github.io/Todo_List/)</a>
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
