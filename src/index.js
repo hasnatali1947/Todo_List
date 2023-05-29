@@ -1,29 +1,47 @@
 import { Add, Remove } from './modules/funtions.js';
 import './style.css';
-import { check, UpdateCheck, DeleteAll } from './modules/CheckandClear.js';
+import { check, updateCheck, deleteAll } from './modules/CheckandClear.js';
 
-const Container = document.getElementById('addtodo');
-const input = document.querySelector('.inp');
-const Tasks = JSON.parse(localStorage.getItem('list')) || [];
+const container = document.getElementById('addtodo');
+let inputValue = '';
+const tasks = JSON.parse(localStorage.getItem('list')) || [];
 
-const Display = () => {
-  Tasks.forEach((list, index) => {
-    Container.innerHTML += `
+const displayTasks = () => {
+  tasks.forEach((task, index) => {
+    container.innerHTML += `
       <li class="li-list">
         <input class="li-list check" type="checkbox" data-com="${index}">
-        <p contenteditable="true" class="paragraph" data-para="${index}">${list.description}</p>
+        <p contenteditable="true" class="paragraph" data-para="${index}">${task.description}</p>
         <i class="fa-regular fa-trash-can" data-index="${index}"></i>
         <i class="li-list fa-solid fa-ellipsis-vertical"></i>
       </li>`;
   });
 };
 
+const input = document.querySelector('.input');
+
+input.addEventListener('input', (e) => {
+  inputValue = e.target.value;
+});
+
 input.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
-    Add();
-    window.location.reload();
+    const create = {
+      description: input.value.trim(),
+      completed: false,
+      index: tasks.length + 1,
+    };
+    if (create.description !== '') {
+      Add(create);
+      window.location.reload();
+    }
   }
 });
+
+window.addEventListener('load', () => {
+  input.value = inputValue;
+});
+
 const listItemsContainer = document.querySelector('#addtodo');
 const liLists = document.getElementsByClassName('li-list');
 listItemsContainer.addEventListener('click', (e) => {
@@ -44,14 +62,17 @@ listItemsContainer.addEventListener('click', (e) => {
     window.location.reload();
   }
 });
-const update = () => {
-  for (let i = 0; i < Tasks.length; i += 1) {
-    Tasks[i].index = i + 1;
+
+const updateTasks = () => {
+  for (let i = 0; i < tasks.length; i += 1) {
+    tasks[i].index = i + 1;
   }
-  localStorage.setItem('list', JSON.stringify(Tasks));
-  Display();
+  localStorage.setItem('list', JSON.stringify(tasks));
+  displayTasks();
 };
-update();
+
+updateTasks();
+
 listItemsContainer.addEventListener('keypress', (e) => {
   if (e.target.classList.contains('paragraph')) {
     if (e.key === 'Enter') {
@@ -59,10 +80,12 @@ listItemsContainer.addEventListener('keypress', (e) => {
         return false;
       }
       const num = e.target.getAttribute('data-para');
-      Tasks[num].description = e.target.textContent;
+      tasks[num].description = e.target.textContent;
     }
   }
-  return localStorage.setItem('list', JSON.stringify(Tasks));
+  localStorage.setItem('list', JSON.stringify(tasks));
+
+  return true; // Add this line to return at the end of the arrow function
 });
 
 listItemsContainer.addEventListener('click', (event) => {
@@ -70,8 +93,8 @@ listItemsContainer.addEventListener('click', (event) => {
 });
 
 document.addEventListener('change', (event) => {
-  UpdateCheck(event);
+  updateCheck(event);
 });
 
 const deleteBtn = document.getElementById('ClearAll');
-deleteBtn.addEventListener('click', DeleteAll);
+deleteBtn.addEventListener('click', deleteAll);

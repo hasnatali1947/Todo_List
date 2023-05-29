@@ -1,23 +1,24 @@
-let Tasks = JSON.parse(localStorage.getItem('list')) || [];
+let tasks = JSON.parse(localStorage.getItem('list')) || [];
+
 function check(e) {
   if (e.target.classList.contains('check')) {
     e.target.nextElementSibling.classList.toggle('line');
   }
 }
 
-export { check };
-const UpdateCheck = (event) => {
+function updateCheck(event) {
   const index = event.target.getAttribute('data-com');
-  if (Tasks[index]) {
-    Tasks[index].completed = event.target.checked;
-    localStorage.setItem('list', JSON.stringify(Tasks));
+  if (tasks[index]) {
+    tasks[index].completed = event.target.checked;
+    localStorage.setItem('list', JSON.stringify(tasks));
   }
-};
-export { UpdateCheck };
-const DeleteAll = () => {
-  const Incomplete = Tasks.filter((task) => !task.completed);
-  Tasks = Incomplete;
-  localStorage.setItem('list', JSON.stringify(Tasks));
+}
+
+function deleteAll() {
+  const incompleteTasks = tasks.filter((task) => !task.completed);
+  tasks = incompleteTasks;
+  localStorage.setItem('list', JSON.stringify(tasks));
   window.location.reload();
-};
-export { DeleteAll };
+}
+
+export { check, updateCheck, deleteAll };
