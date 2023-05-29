@@ -28,9 +28,7 @@
 
 ## 🛠️ Built With <a name="built-with"></a>
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> <a href="(https://hasnatali1947.github.io/Todo_List/dist)" >Visit</a>
+## 🚀 Live Demo <a name="live-demo">(https://hasnatali1947.github.io/Todo_List/dist)</a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
