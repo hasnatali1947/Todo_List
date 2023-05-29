@@ -1,32 +1,28 @@
-// In your JavaScript file
-const Tasks = JSON.parse(
-  typeof localStorage !== 'undefined' ? localStorage.getItem('list') : null,
-) || [];
+const tasks = JSON.parse(localStorage.getItem('list')) || [];
+const input = document.querySelector('.input');
 
-// In your JavaScript file
-const input = typeof document !== 'undefined' ? document.querySelector('.inp') : null;
-
-const Add = (obj) => {
+function Add(obj) {
   if (!obj) {
     const create = {
-      description: input ? input.value : '',
+      description: input?.value || '',
       completed: false,
-      index: Tasks.length + 1,
+      index: tasks.length + 1,
     };
     if (create.description !== '') {
-      Tasks.push(create);
+      tasks.push(create);
     }
   } else {
-    Tasks.push(obj);
+    tasks.push(obj);
   }
-  localStorage.setItem('list', JSON.stringify(Tasks));
-  return Tasks;
-};
-export { Add };
+  
+  localStorage.setItem('list', JSON.stringify(tasks));
+  return tasks;
+}
 
-const Remove = (index) => {
-  Tasks.splice(index, 1);
-  localStorage.setItem('list', JSON.stringify(Tasks));
-  return Tasks;
-};
-export { Remove };
+function Remove(index) {
+  tasks.splice(index, 1);
+  localStorage.setItem('list', JSON.stringify(tasks));
+  return tasks;
+}
+
+export { Add, Remove };
